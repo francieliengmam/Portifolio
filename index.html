@@ -131,39 +131,42 @@
         }
 
         .project-card {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 20px;
-            background: #fafafa;
-        }
-
-        .project-card:last-child {
-            margin-bottom: 0;
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 24px;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.05);
         }
 
         .project-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             flex-wrap: wrap;
             gap: 8px;
         }
 
         .project-title {
-            font-size: 1.15rem;
+            font-size: 1.3rem;
             color: var(--primary);
             font-weight: 700;
         }
 
         .tag {
-            background: #e2e8f0;
-            color: var(--primary);
-            padding: 4px 10px;
+            background: var(--accent);
+            color: white;
+            padding: 4px 12px;
             border-radius: 12px;
             font-size: 0.75rem;
             font-weight: 600;
+        }
+
+        .project-desc {
+            margin-bottom: 16px;
+            color: var(--text);
+            font-size: 0.95rem;
         }
 
         .metrics-grid {
@@ -174,22 +177,33 @@
         }
 
         .metric-box {
-            background: white;
-            padding: 12px;
+            background: var(--accent-light);
+            padding: 14px;
             border-radius: 6px;
-            border: 1px solid var(--border);
+            border: 1px solid #bfdbfe;
             text-align: center;
         }
 
         .metric-val {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            color: var(--success);
+            color: var(--accent);
         }
 
         .metric-label {
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .tech-list {
+            margin-top: 16px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+        
+        .tech-list strong {
+            color: var(--primary);
         }
     </style>
 </head>
@@ -199,7 +213,7 @@
         <h1>Francieli Engmam</h1>
         <div class="subtitle">Data Analyst | Business Intelligence & Data Quality Specialist</div>
         <p class="bio">
-            Analytical and result-oriented Data Analyst with extensive experience in client relations, supply chain auditing, and AI data annotation. Skilled in Python, SQL, Power BI, and SAP, with a proven track record of driving operational efficiency and maintain high data accuracy.
+            Analytical and result-oriented Data Analyst with extensive experience in client relations, supply chain auditing, and AI data annotation. Skilled in Python, SQL, Power BI, and SAP, with a proven track record of driving operational efficiency and maintaining high data accuracy.
         </p>
         <div class="contact-links">
             <a href="mailto:francieliengmam93@gmail.com" class="btn btn-primary">Email Me</a>
@@ -226,36 +240,18 @@
     </section>
 
     <section>
-        <h2>Featured Data Projects & Case Studies</h2>
+        <h2>Featured Analytics Projects</h2>
 
+        <!-- PROJETO 1 -->
         <div class="project-card">
             <div class="project-header">
-                <div class="project-title">1. Equipment Downtime & SLA Optimization</div>
-                <span class="tag">Power BI / Excel / Operations</span>
+                <div class="project-title">Project 1: Supply Chain & EDI Demand Forecast Anomaly Detection</div>
+                <span class="tag">Flagship Case Study</span>
             </div>
-            <p>Designed custom Power BI models to monitor supermarket equipment maintenance, track supplier SLAs, and detect anomalies early in the workflow.</p>
-            <div class="metrics-grid">
-                <div class="metric-box">
-                    <div class="metric-val">-80%</div>
-                    <div class="metric-label">Equipment Downtime</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-val">&lt; 1%</div>
-                    <div class="metric-label">Monthly Failure Rate</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-val">100%</div>
-                    <div class="metric-label">SLA Compliance Tracking</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-header">
-                <div class="project-title">2. Supply Chain & EDI Anomaly Detection</div>
-                <span class="tag">SQL / Python / SAP</span>
-            </div>
-            <p>Audited 6-to-12-month customer demand forecasts against firm EDI orders for major automotive OEMs (Toyota, Honda, Renault), detecting discrepancies before production impact.</p>
+            <p class="project-desc">
+                Developed an analytical framework and executive Power BI model to audit 6-to-12-month customer demand forecasts against firm EDI orders for major automotive OEMs (Toyota, Honda, Renault). Identified critical variance patterns to prevent assembly line shortages and costly emergency freight.
+            </p>
+            
             <div class="metrics-grid">
                 <div class="metric-box">
                     <div class="metric-val">0</div>
@@ -265,26 +261,17 @@
                     <div class="metric-val">100%</div>
                     <div class="metric-label">EDI Forecast Accuracy</div>
                 </div>
+                <div class="metric-box">
+                    <div class="metric-val">-25%</div>
+                    <div class="metric-label">Buffer Stock Cost Reduction</div>
+                </div>
+            </div>
+
+            <div class="tech-list">
+                <strong>Tools & Methods:</strong> Power BI (DAX, Power Query), SAP ERP, SQL (Window Functions), Advanced Excel, Star Schema Modeling.
             </div>
         </div>
 
-        <div class="project-card">
-            <div class="project-header">
-                <div class="project-title">3. AI Data Annotation & Computer Vision Quality</div>
-                <span class="tag">AI Quality / LLM Benchmarking</span>
-            </div>
-            <p>Reviewed, validated, and structured complex Portuguese audio and metadata datasets, applying millisecond-level precision timestamps for LLM and Computer Vision models.</p>
-            <div class="metrics-grid">
-                <div class="metric-box">
-                    <div class="metric-val">99.8%</div>
-                    <div class="metric-label">Data Validation Precision</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-val">10k+</div>
-                    <div class="metric-label">Audited Data Points</div>
-                </div>
-            </div>
-        </div>
     </section>
 
 </body>
