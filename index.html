@@ -4,485 +4,673 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francieli Engmam | Senior Data & BI Analyst</title>
-    <!-- Fontes Corporativas Executivas (Plus Jakarta Sans & Inter) -->
+    <!-- Google Fonts Executivas e Modernas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            /* Paleta Tokyonight Corporate Dark */
-            --bg-main: #0f121d;
-            --bg-surface: #1a1e2e;
-            --bg-card: #222738;
-            --border-subtle: #2d344b;
-            --border-hover: #4a5578;
+            /* Paleta Dark Mode Tech Premium */
+            --bg-dark: #090a10;
+            --bg-surface: #121420;
+            --bg-card: #191c2e;
+            --border-color: #272b43;
+            --border-hover: #5b6294;
             
-            --text-heading: #ffffff;
-            --text-body: #a9b1d6;
-            --text-muted: #6272a4;
+            --text-white: #ffffff;
+            --text-body: #a2a8cc;
+            --text-muted: #656b96;
             
-            --brand-accent: #7aa2f7;
-            --brand-cyan: #0db9d7;
-            --brand-green: #73daca;
+            /* Destaques Neon (Estilo UI Moderno) */
+            --accent-purple: #7047eb;
+            --accent-purple-hover: #8862f9;
+            --accent-cyan: #00d2ff;
+            --accent-green: #00e6a8;
             
-            --font-display: 'Plus Jakarta Sans', sans-serif;
-            --font-body: 'Inter', sans-serif;
+            --font-main: 'Plus Jakarta Sans', sans-serif;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-main);
+            background-color: var(--bg-dark);
             color: var(--text-body);
-            font-family: var(--font-body);
+            font-family: var(--font-main);
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        a { text-decoration: none; color: inherit; }
 
         .container {
-            max-width: 1040px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 60px 24px;
+            padding: 0 24px;
         }
 
-        /* --- Header Executivo --- */
-        header {
-            text-align: center;
-            padding-bottom: 50px;
-            margin-bottom: 50px;
-            border-bottom: 1px solid var(--border-subtle);
+        /* --- Navbar Superior --- */
+        navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(9, 10, 16, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .badge-role {
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .brand-logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-white);
+            letter-spacing: -0.02em;
+        }
+
+        .brand-logo span { color: var(--accent-purple); }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-body);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--accent-cyan); }
+
+        .btn-nav {
+            background: var(--accent-purple);
+            color: var(--text-white);
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+
+        .btn-nav:hover { background: var(--accent-purple-hover); }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            padding-top: 170px;
+            padding-bottom: 90px;
+        }
+
+        .hero-badge {
             display: inline-block;
-            font-family: var(--font-display);
-            font-size: 0.825rem;
+            font-size: 0.85rem;
             font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--brand-cyan);
-            background: rgba(13, 185, 215, 0.08);
-            border: 1px solid rgba(13, 185, 215, 0.2);
+            color: var(--accent-cyan);
+            background: rgba(0, 210, 255, 0.08);
+            border: 1px solid rgba(0, 210, 255, 0.25);
             padding: 6px 16px;
-            border-radius: 20px;
+            border-radius: 30px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-white);
+            line-height: 1.15;
+            letter-spacing: -0.03em;
             margin-bottom: 20px;
         }
 
-        header h1 {
-            font-family: var(--font-display);
-            font-size: 2.75rem;
-            font-weight: 800;
-            color: var(--text-heading);
-            letter-spacing: -0.03em;
-            margin-bottom: 16px;
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero-summary {
-            max-width: 760px;
-            margin: 0 auto;
-            font-size: 1.1rem;
+        .hero-subtitle {
+            font-size: 1.2rem;
             color: var(--text-body);
+            max-width: 780px;
+            margin-bottom: 36px;
             font-weight: 400;
         }
 
-        /* --- Títulos de Secção --- */
-        .section-title {
+        .hero-cta {
             display: flex;
-            align-items: center;
             gap: 16px;
-            margin-bottom: 32px;
+            align-items: center;
         }
 
-        .section-title h2 {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
+        .btn-primary {
+            background: var(--accent-purple);
+            color: var(--text-white);
+            padding: 14px 32px;
+            border-radius: 8px;
             font-weight: 700;
-            color: var(--text-heading);
-            letter-spacing: -0.01em;
-            white-space: nowrap;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 20px rgba(112, 71, 235, 0.35);
+            transition: all 0.2s;
         }
 
-        .section-title .divider {
-            width: 100%;
-            height: 1px;
-            background-color: var(--border-subtle);
+        .btn-primary:hover {
+            background: var(--accent-purple-hover);
+            transform: translateY(-2px);
         }
 
-        /* --- Technical Competencies --- */
-        .skills-grid {
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        /* --- About Section --- */
+        .section-padding {
+            padding: 90px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-tag {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-purple);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-white);
+            letter-spacing: -0.02em;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            margin-bottom: 16px;
+        }
+
+        .info-list {
+            list-style: none;
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 60px;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        .skill-item {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--text-heading);
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: all 0.2s ease;
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            font-size: 0.95rem;
         }
 
-        .skill-item:hover {
-            border-color: var(--brand-accent);
-            color: var(--brand-accent);
-            transform: translateY(-1px);
+        .info-label { color: var(--text-muted); font-weight: 500; }
+        .info-value { color: var(--text-white); font-weight: 600; }
+
+        /* --- Tech Stack Section --- */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
         }
 
-        /* --- Case Studies --- */
-        .case-list {
+        .skill-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+
+        .skill-card:hover {
+            border-color: var(--accent-purple);
+            transform: translateY(-3px);
+        }
+
+        .skill-card h4 {
+            color: var(--text-white);
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .skill-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* --- Projects Case Studies --- */
+        .projects-grid {
             display: flex;
             flex-direction: column;
             gap: 32px;
         }
 
-        .case-card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 36px;
-            transition: all 0.25s ease;
+        .project-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.25s;
         }
 
-        .case-card:hover {
+        .project-card:hover {
             border-color: var(--border-hover);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
-        .case-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-
-        .case-category {
-            font-family: var(--font-display);
+        .project-tag {
             font-size: 0.8rem;
             font-weight: 700;
+            color: var(--accent-cyan);
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: var(--brand-accent);
+            margin-bottom: 12px;
+            display: block;
         }
 
-        .case-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
+        .project-title {
+            font-size: 1.6rem;
             font-weight: 700;
-            color: var(--text-heading);
-            margin-bottom: 14px;
-            line-height: 1.35;
+            color: var(--text-white);
+            margin-bottom: 16px;
         }
 
-        .case-description {
-            font-size: 0.975rem;
+        .project-desc {
+            font-size: 1rem;
             color: var(--text-body);
             margin-bottom: 24px;
         }
 
-        /* Impact Metrics Row */
-        .metrics-row {
+        /* Métricas de Alto Impacto */
+        .metrics-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 16px;
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             padding: 20px;
-            margin-bottom: 24px;
+            border-radius: 12px;
+            margin-bottom: 28px;
         }
 
-        .metric-block {
-            text-align: center;
-        }
+        .metric-box { text-align: center; }
 
-        .metric-number {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
+        .metric-val {
+            font-size: 1.8rem;
             font-weight: 800;
-            color: var(--brand-green);
+            color: var(--accent-green);
             line-height: 1.1;
-            margin-bottom: 4px;
         }
 
-        .metric-label {
+        .metric-lbl {
             font-size: 0.8rem;
-            font-weight: 500;
             color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 500;
         }
 
-        /* Tech Tags & Interactive Button */
-        .case-footer {
+        .project-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 16px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border-subtle);
         }
 
-        .tech-tags {
+        .tech-pills {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
 
-        .tech-tag {
-            font-size: 0.775rem;
-            font-weight: 500;
-            color: var(--text-muted);
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-subtle);
-            padding: 4px 10px;
-            border-radius: 4px;
+        .pill {
+            font-size: 0.8rem;
+            color: var(--text-body);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            padding: 4px 12px;
+            border-radius: 6px;
         }
 
-        .btn-interactive {
+        .btn-project {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-family: var(--font-display);
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--bg-main);
-            background-color: var(--brand-accent);
+            background: var(--accent-purple);
+            color: var(--text-white);
             padding: 10px 20px;
-            border-radius: 6px;
-            transition: all 0.2s ease;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.2s;
         }
 
-        .btn-interactive:hover {
-            background-color: #9ab8f9;
-            transform: translateY(-1px);
+        .btn-project:hover {
+            background: var(--accent-purple-hover);
+            transform: translateX(2px);
         }
 
-        /* --- Footer --- */
+        /* --- Footer & Contact --- */
         footer {
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border-subtle);
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--border-color);
             text-align: center;
+        }
+
+        .footer-cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-white);
+            margin-bottom: 16px;
+        }
+
+        .footer-cta-desc {
+            font-size: 1.1rem;
+            color: var(--text-body);
+            margin-bottom: 32px;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 24px;
+            gap: 16px;
+            margin-bottom: 40px;
         }
 
-        .btn-outline {
-            font-family: var(--font-display);
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--text-heading);
-            border: 1px solid var(--border-subtle);
-            padding: 10px 22px;
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-
-        .btn-outline:hover {
-            border-color: var(--brand-accent);
-            color: var(--brand-accent);
-        }
-
-        .footer-copy {
+        .copyright {
             font-size: 0.85rem;
             color: var(--text-muted);
         }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2.1rem; }
-            .metrics-row { grid-template-columns: 1fr; }
-            .case-footer { flex-direction: column; align-items: flex-start; }
-            .btn-interactive { width: 100%; justify-content: center; }
+            .hero-title { font-size: 2.4rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .metrics-container { grid-template-columns: 1fr; }
+            .project-footer { flex-direction: column; align-items: flex-start; }
+            .btn-project { width: 100%; justify-content: center; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-
-    <!-- Header Section -->
-    <header>
-        <div class="badge-role">Data Analytics & Business Intelligence</div>
-        <h1>Francieli Engmam</h1>
-        <p class="hero-summary">
-            Specialized in converting complex operational datasets into high-impact executive dashboards and strategic insights[cite: 1]. Proven track record across Automotive OEM Supply Chain, Operational Logistics, and AI Data Quality Engineering[cite: 1, 2, 3].
-        </p>
-    </header>
-
-    <!-- Technical Competencies -->
-    <section>
-        <div class="section-title">
-            <h2>Technical Stack & Expertise</h2>
-            <div class="divider"></div>
+    <!-- Top Navbar -->
+    <navbar>
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">Francieli<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Tech Stack</a></li>
+                <li><a href="#projects">Portfolio Cases</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="mailto:francieliengmam93@gmail.com" class="btn-nav">Get In Touch</a>
         </div>
-        <div class="skills-grid">
-            <span class="skill-item">Power BI (DAX & Power Query)</span>
-            <span class="skill-item">SQL (PostgreSQL / MySQL)</span>
-            <span class="skill-item">Python (Pandas & Data Integrity)</span>
-            <span class="skill-item">Advanced Excel & Modeling</span>
-            <span class="skill-item">SAP ERP Master Data</span>
-            <span class="skill-item">Supply Chain SLA Optimization</span>
-            <span class="skill-item">Equipment Downtime Analytics</span>
-            <span class="skill-item">EDI Demand Forecast Auditing</span>
-            <span class="skill-item">AI Data Annotation & Quality</span>
-        </div>
-    </section>
+    </navbar>
 
-    <!-- Executive Case Studies -->
-    <section>
-        <div class="section-title">
-            <h2>Featured Analytics Case Studies</h2>
-            <div class="divider"></div>
-        </div>
-
-        <div class="case-list">
-
-            <!-- Case 1: Supply Chain -->
-            <article class="case-card">
-                <div class="case-header">
-                    <span class="case-category">Supply Chain & Logistics</span>
-                </div>
-                <h3>Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard</h3>
-                <p class="case-description">
-                    Built an executive Power BI reporting system cross-referencing firm EDI customer orders with 6-to-12-month demand forecasts and international shipping documentation[cite: 2]. Identified critical lead-time bottlenecks and prevented assembly line shutdowns for global OEM clients[cite: 2].
-                </p>
-
-                <div class="metrics-row">
-                    <div class="metric-block">
-                        <div class="metric-number">0 Hours</div>
-                        <div class="metric-label">Assembly Line Downtime</div>
-                    </div>
-                    <div class="metric-block">
-                        <div class="metric-number">100%</div>
-                        <div class="metric-label">EDI vs. Forecast Accuracy</div>
-                    </div>
-                    <div class="metric-block">
-                        <div class="metric-number">Global</div>
-                        <div class="metric-label">Cross-Border Audit Pipeline</div>
-                    </div>
-                </div>
-
-                <div class="case-footer">
-                    <div class="tech-tags">
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">SAP ERP</span>
-                        <span class="tech-tag">DAX</span>
-                    </div>
-                    <a href="https://github.com/francieliengmam/Portifolio#readme" target="_blank" class="btn-interactive">
-                        Explore Case Documentation →
-                    </a>
-                </div>
-            </article>
-
-            <!-- Case 2: Maintenance Operations -->
-            <article class="case-card">
-                <div class="case-header">
-                    <span class="case-category">Operations & Maintenance</span>
-                </div>
-                <h3>Retail Supermarket Equipment Downtime & Vendor SLA Tracking</h3>
-                <p class="case-description">
-                    Engineered operational metrics and custom dashboards to track maintenance frequency, equipment failure rates, and vendor SLA compliance across commercial supermarket facilities[cite: 3].
-                </p>
-
-                <div class="metrics-row">
-                    <div class="metric-block">
-                        <div class="metric-number">-80%</div>
-                        <div class="metric-label">Equipment Downtime Reduction</div>
-                    </div>
-                    <div class="metric-block">
-                        <div class="metric-number">&lt; 1%</div>
-                        <div class="metric-label">Monthly Failure / Return Rate</div>
-                    </div>
-                    <div class="metric-block">
-                        <div class="metric-number">100%</div>
-                        <div class="metric-label">Vendor SLA Compliance</div>
-                    </div>
-                </div>
-
-                <div class="case-footer">
-                    <div class="tech-tags">
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">Excel</span>
-                    </div>
-                    <a href="https://github.com/francieliengmam/Portifolio#readme" target="_blank" class="btn-interactive">
-                        Explore Case Documentation →
-                    </a>
-                </div>
-            </article>
-
-            <!-- Case 3: AI & Data Quality -->
-            <article class="case-card">
-                <div class="case-header">
-                    <span class="case-category">AI Quality & Data Governance</span>
-                </div>
-                <h3>Precision Data Validation & Annotation Pipeline for LLM Models</h3>
-                <p class="case-description">
-                    Designed data quality verification and audio transcription validation workflows in Brazilian Portuguese[cite: 3]. Ensured high-precision data inputs for Large Language Models (LLMs) and speech recognition pipelines[cite: 3].
-                </p>
-
-                <div class="metrics-row">
-                    <div class="metric-block">
-                        <div class="metric-number">99.8%</div>
-                        <div class="metric-label">Data Validation Precision</div>
-                    </div>
-                    <div class="metric-block">
-                        <div class="metric-number">+10,000</div>
-                        <div class="metric-label">Audited High-Precision Data Points</div>
-                    </div>
-                    <div class="metric-block">
-                        <div class="metric-number">Zero</div>
-                        <div class="metric-label">Critical Schema Errors</div>
-                    </div>
-                </div>
-
-                <div class="case-footer">
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">Data Auditing</span>
-                        <span class="tech-tag">LLM Quality</span>
-                    </div>
-                    <a href="https://github.com/francieliengmam/Portifolio#readme" target="_blank" class="btn-interactive">
-                        Explore Case Documentation →
-                    </a>
-                </div>
-            </article>
-
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <span class="hero-badge">Data Analytics & Business Intelligence</span>
+            <h1 class="hero-title">
+                Turning Operational Complexity into <span class="highlight">Executive Intelligence</span>
+            </h1>
+            <p class="hero-subtitle">
+                Senior Analytics & BI Specialist focused on Automotive OEM Supply Chains, Logistics Optimization, Equipment Downtime, and AI Data Integrity[cite: 1, 2, 3].
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View Case Studies</a>
+                <a href="https://www.linkedin.com/in/francieliengmam" target="_blank" class="btn-secondary">LinkedIn Profile</a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="mailto:francieliengmam93@gmail.com" class="btn-outline">Email Contact</a>
-            <a href="https://www.linkedin.com/in/francieliengmam" target="_blank" class="btn-outline">LinkedIn Profile</a>
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Overview</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        High-precision Data & Business Intelligence Specialist with extensive hands-on experience bridging technical data pipelines with executive leadership demands[cite: 1].
+                    </p>
+                    <p>
+                        Proven success in auditing high-volume supply chain datasets (SAP, MySQL, Python), detecting anomalies in EDI order forecasts, and mitigating operational downtime for major automotive OEMs and commercial facilities[cite: 1, 2, 3].
+                    </p>
+                </div>
+                <ul class="info-list">
+                    <li class="info-item">
+                        <span class="info-label">Role:</span>
+                        <span class="info-value">Data Analytics & BI Specialist</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Core Focus:</span>
+                        <span class="info-value">Supply Chain, SLAs & Data Quality</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Key Tools:</span>
+                        <span class="info-value">Power BI, SQL, Python, SAP, Excel</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Languages:</span>
+                        <span class="info-value">English (Advanced), Portuguese (Native)</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p class="footer-copy">&copy; 2026 Francieli Engmam. All rights reserved.</p>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Capabilities</span>
+                <h2 class="section-title">Tech Stack & Expertise</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h4>Power BI & DAX</h4>
+                    <p>Executive dashboards, star-schema modeling & automated reporting.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>SQL & Databases</h4>
+                    <p>Complex queries, window functions, PostgreSQL & MySQL audits.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Python Analytics</h4>
+                    <p>Data cleaning, Pandas/NumPy pipelines & outlier detection.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Supply Chain & ERP</h4>
+                    <p>SAP ERP master data, EDI demand forecast & cross-border logistics[cite: 2].</p>
+                </div>
+                <div class="skill-card">
+                    <h4>KPI Engineering</h4>
+                    <p>SLA tracking, equipment downtime metrics & variance analysis[cite: 3].</p>
+                </div>
+                <div class="skill-card">
+                    <h4>AI & Data Quality</h4>
+                    <p>Audio transcription validation, schema rules & LLM datasets[cite: 3].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured Work</span>
+                <h2 class="section-title">Executive Case Studies</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Case 1: Supply Chain -->
+                <article class="project-card">
+                    <span class="project-tag">Supply Chain & Logistics</span>
+                    <h3 class="project-title">Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard</h3>
+                    <p class="project-desc">
+                        Built an executive BI system cross-referencing customer demand forecasts (6–12 months) against firm EDI orders[cite: 2]. Cross-checked international shipping docs (US, Thailand, France) to eliminate assembly line shutdowns for global OEM clients[cite: 2].
+                    </p>
+                    <div class="metrics-container">
+                        <div class="metric-box">
+                            <div class="metric-val">Zero</div>
+                            <div class="metric-lbl">Assembly Line Downtime</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-val">100%</div>
+                            <div class="metric-lbl">EDI vs. Forecast Accuracy</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-val">Global</div>
+                            <div class="metric-lbl">Cross-Border Audit</div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <div class="tech-pills">
+                            <span class="pill">Power BI</span>
+                            <span class="pill">SQL</span>
+                            <span class="pill">SAP ERP</span>
+                            <span class="pill">DAX</span>
+                        </div>
+                        <a href="https://github.com/francieliengmam/Portifolio#readme" target="_blank" class="btn-project">
+                            Open Interactive Case Study →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Case 2: Maintenance Operations -->
+                <article class="project-card">
+                    <span class="project-tag">Operations & Maintenance</span>
+                    <h3 class="project-title">Supermarket Equipment Downtime & Vendor SLA Tracking</h3>
+                    <p class="project-desc">
+                        Engineered operational tracking models to monitor equipment failure rates, repair frequencies, and supplier SLAs across retail facilities, achieving drastic downtime reductions[cite: 3].
+                    </p>
+                    <div class="metrics-container">
+                        <div class="metric-box">
+                            <div class="metric-val">-80%</div>
+                            <div class="metric-lbl">Equipment Downtime</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-val">&lt; 1%</div>
+                            <div class="metric-lbl">Monthly Return/Failure Rate</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-val">100%</div>
+                            <div class="metric-lbl">Vendor SLA Compliance</div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <div class="tech-pills">
+                            <span class="pill">SQL</span>
+                            <span class="pill">Python</span>
+                            <span class="pill">Power BI</span>
+                            <span class="pill">Advanced Excel</span>
+                        </div>
+                        <a href="https://github.com/francieliengmam/Portifolio#readme" target="_blank" class="btn-project">
+                            Open Interactive Case Study →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Case 3: AI Quality -->
+                <article class="project-card">
+                    <span class="project-tag">AI & Data Governance</span>
+                    <h3 class="project-title">Precision Data Validation Pipeline for LLM Models</h3>
+                    <p class="project-desc">
+                        Designed rigorous data auditing and validation workflows in Brazilian Portuguese, ensuring millisecond-level precision for AI audio transcription and LLM dataset training[cite: 3].
+                    </p>
+                    <div class="metrics-container">
+                        <div class="metric-box">
+                            <div class="metric-val">99.8%</div>
+                            <div class="metric-lbl">Data Validation Precision</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-val">+10,000</div>
+                            <div class="metric-lbl">Audited Data Points</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-val">Zero</div>
+                            <div class="metric-lbl">Schema Errors</div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <div class="tech-pills">
+                            <span class="pill">Python</span>
+                            <span class="pill">Pandas</span>
+                            <span class="pill">Data Quality</span>
+                            <span class="pill">LLMs</span>
+                        </div>
+                        <a href="https://github.com/francieliengmam/Portifolio#readme" target="_blank" class="btn-project">
+                            Open Interactive Case Study →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="contact">
+        <div class="container">
+            <h2 class="footer-cta-title">Let's Work Together</h2>
+            <p class="footer-cta-desc">Open for global remote roles and high-impact analytics projects.</p>
+            <div class="footer-links">
+                <a href="mailto:francieliengmam93@gmail.com" class="btn-primary">Send Email</a>
+                <a href="https://www.linkedin.com/in/francieliengmam" target="_blank" class="btn-secondary">LinkedIn</a>
+            </div>
+            <p class="copyright">&copy; 2026 Francieli Engmam. Designed for High Performance.</p>
+        </div>
     </footer>
-
-</div>
 
 </body>
 </html>
