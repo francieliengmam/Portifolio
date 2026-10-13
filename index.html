@@ -1,370 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Francieli Engmam | Data & BI Analyst Portfolio</title>
+    <title>Francieli Engmam | Portfólio de Dados</title>
     <style>
         :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --accent-light: #eff6ff;
-            --text: #334155;
-            --text-muted: #64748b;
-            --border: #e2e8f0;
-            --success: #16a34a;
+            --bg-color: #1a1b26;
+            --card-bg: #24283b;
+            --text-color: #c0caf5;
+            --accent-color: #7aa2f7;
+            --border-color: #414868;
+            --hover-color: #3b4261;
         }
-
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text);
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        header {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .bio {
-            color: var(--text-muted);
-            margin-bottom: 24px;
-            font-size: 1rem;
+        .container {
+            width: 100%;
             max-width: 800px;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-
-        .contact-links {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #1d4ed8;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: var(--primary);
-            border: 1px solid var(--border);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--accent-light);
-            border-color: var(--accent);
-        }
-
-        .btn-sm {
-            padding: 8px 14px;
-            font-size: 0.83rem;
-            margin-top: 14px;
-            margin-right: 8px;
-        }
-
-        section {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 32px;
-            margin-bottom: 30px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent-light);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 16px;
-        }
-
-        .skill-card {
-            background: var(--accent-light);
-            padding: 16px;
-            border-radius: 8px;
-            border: 1px solid #dbeafe;
-        }
-
-        .skill-card h3 {
-            font-size: 1rem;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-
-        .skill-card p {
-            font-size: 0.88rem;
-            color: var(--text);
-        }
-
-        .project-card {
-            border: 2px solid var(--accent);
-            border-radius: 10px;
-            padding: 28px;
-            margin-bottom: 24px;
-            background: #ffffff;
-            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.05);
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 14px;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .project-title {
-            font-size: 1.3rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .tag {
-            background: var(--accent);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .project-desc {
-            margin-bottom: 16px;
-            color: var(--text);
-            font-size: 0.95rem;
-        }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin: 16px 0;
-        }
-
-        .metric-box {
-            background: var(--accent-light);
-            padding: 14px;
-            border-radius: 6px;
-            border: 1px solid #bfdbfe;
+        header {
             text-align: center;
+            margin-bottom: 40px;
         }
-
-        .metric-val {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--accent);
+        h1 {
+            color: var(--accent-color);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
         }
-
-        .metric-label {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            font-weight: 600;
+        p.subtitle {
+            color: #9aa5ce;
+            font-size: 1.1rem;
         }
-
-        .tech-list {
-            margin-top: 16px;
-            font-size: 0.88rem;
-            color: var(--text-muted);
+        .section-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 20px;
         }
-        
-        .tech-list strong {
-            color: var(--primary);
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .card:hover {
+            background-color: var(--hover-color);
+            transform: translateY(-2px);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card p {
+            color: #9aa5ce;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #414868;
+            color: #7aa2f7;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #565f89;
+            font-size: 0.9rem;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Francieli Engmam</h1>
+            <p class="subtitle">Analista de Dados | Supply Chain & Business Intelligence</p>
+        </header>
 
-    <header>
-        <h1>Francieli Engmam</h1>
-        <div class="subtitle">Data Analyst | Business Intelligence & Data Quality Specialist</div>
-        <p class="bio">
-            Analytical and result-oriented Data Analyst with extensive experience in client relations, supply chain auditing, and AI data annotation. Skilled in Python, SQL, Power BI, and SAP, with a proven track record of driving operational efficiency and maintaining high data accuracy.
-        </p>
-        <div class="contact-links">
-            <a href="mailto:francieliengmam93@gmail.com" class="btn btn-primary">Email Me</a>
-            <a href="https://linkedin.com/in/francieliengmam" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
-        </div>
-    </header>
+        <div class="section-title">🚀 Projetos e Templates em Destaque</div>
 
-    <section>
-        <h2>Core Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Data & Analytics</h3>
-                <p>SQL, Python, Power BI, Advanced Excel (Power Query), SAP, MySQL, KPI Engineering</p>
-            </div>
-            <div class="skill-card">
-                <h3>AI & Data Quality</h3>
-                <p>AI Data Annotation, Pattern Recognition, Verbatim Transcription, Content Auditing</p>
-            </div>
-            <div class="skill-card">
-                <h3>Business & Operations</h3>
-                <p>Supply Chain Logistics, SLA Optimization, Executive Reporting, Client Success</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Featured Analytics Projects</h2>
-
-        <!-- PROJETO 1 -->
-        <div class="project-card">
-            <div class="project-header">
-                <div class="project-title">Project 1: Supply Chain & EDI Demand Forecast Anomaly Detection</div>
-                <span class="tag">Flagship Case Study</span>
-            </div>
-            <p class="project-desc">
-                Developed an analytical framework and executive Power BI model to audit 6-to-12-month customer demand forecasts against firm EDI orders for major automotive OEMs (Toyota, Honda, Renault). Identified critical variance patterns to prevent assembly line shortages and costly emergency freight.
-            </p>
-            
-            <div class="metrics-grid">
-                <div class="metric-box">
-                    <div class="metric-val">0</div>
-                    <div class="metric-label">Assembly Line Downtime</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-val">100%</div>
-                    <div class="metric-label">EDI Forecast Accuracy</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-val">-25%</div>
-                    <div class="metric-label">Buffer Stock Cost Reduction</div>
-                </div>
-            </div>
-
-            <div class="tech-list">
-                <strong>Tools & Methods:</strong> Power BI (DAX, Power Query), SAP ERP, SQL (Window Functions), Advanced Excel, Star Schema Modeling.
-            </div>
-
-            <div>
-                <a href="https://github.com/francieliengmam" target="_blank" class="btn btn-primary btn-sm">📊 View Power BI Dashboard Model</a>
-                <a href="https://github.com/francieliengmam" target="_blank" class="btn btn-outline btn-sm">💻 View SQL / DAX Queries</a>
-            </div>
+        <!-- Projeto 1: Supply Chain -->
+        <div class="card">
+            <h3>🚚 Supply Chain & Logística <span class="badge">Power BI</span></h3>
+            <p>Dashboard executivo focado na monitorização de fretes, SLAs operacionais e gestão de riscos na cadeia de suprimentos em ambientes OEM.</p>
         </div>
 
-        <!-- PROJETO 2 -->
-        <div class="project-card">
-            <div class="project-header">
-                <div class="project-title">Project 2: Equipment Downtime & SLA Predictive Analytics</div>
-                <span class="tag">Operations & Maintenance</span>
-            </div>
-            <p class="project-desc">
-                Engineered analytical pipelines using Python and SQL to monitor equipment failure trends across commercial supermarket locations. Evaluated supplier service level agreements (SLAs) and built predictive indicators to schedule proactive maintenance.
-            </p>
-            
-            <div class="metrics-grid">
-                <div class="metric-box">
-                    <div class="metric-val">-80%</div>
-                    <div class="metric-label">Equipment Downtime</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-val">&lt; 1%</div>
-                    <div class="metric-label">Monthly Failure Rate</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-val">100%</div>
-                    <div class="metric-label">SLA Compliance Audit</div>
-                </div>
-            </div>
-
-            <div class="tech-list">
-                <strong>Tools & Methods:</strong> Python (Pandas, Matplotlib), SQL (Complex Joins & Aggregations), KPI Engineering, Operational Dashboards.
-            </div>
-
-            <div>
-                <a href="https://github.com/francieliengmam" target="_blank" class="btn btn-primary btn-sm">🐍 View Python / Pandas Script</a>
-                <a href="https://github.com/francieliengmam" target="_blank" class="btn btn-outline btn-sm">📈 View SLA Performance Report</a>
-            </div>
+        <!-- Projeto 2: Operações e Manutenção -->
+        <div class="card">
+            <h3>🏬 Operações & Manutenção <span class="badge">SQL / Python</span></h3>
+            <p>Template analítico para tracking de tempo de inatividade de equipamentos, custos de manutenção e eficiência operacional.</p>
         </div>
 
-        <!-- PROJETO 3 -->
-        <div class="project-card">
-            <div class="project-header">
-                <div class="project-title">Project 3: AI Data Annotation & Computer Vision Quality Assurance</div>
-                <span class="tag">AI Quality & Data Governance</span>
-            </div>
-            <p class="project-desc">
-                Reviewed, validated, and structured complex Portuguese audio and metadata datasets, applying millisecond-level precision timestamps and strict data schemas to benchmark Large Language Models (LLMs) and Computer Vision pipelines.
-            </p>
-            
-            <div class="metrics-grid">
-                <div class="metric-box">
-                    <div class="metric-val">99.8%</div>
-                    <div class="metric-label">Data Validation Precision</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-val">10k+</div>
-                    <div class="metric-label">Audited Data Points</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-val">0</div>
-                    <div class="metric-label">Critical Schema Errors</div>
-                </div>
-            </div>
-
-            <div class="tech-list">
-                <strong>Tools & Methods:</strong> Python (Pandas), Data Cleaning, Outlier Detection, Natural Language Processing (NLP) Pre-processing, Quality Metrics Auditing.
-            </div>
-
-            <div>
-                <a href="https://github.com/francieliengmam" target="_blank" class="btn btn-primary btn-sm">🔍 View AI Quality Benchmark Script</a>
-                <a href="https://github.com/francieliengmam" target="_blank" class="btn btn-outline btn-sm">📋 View Data Validation Rules</a>
-            </div>
+        <!-- Projeto 3: AI & Qualidade de Dados -->
+        <div class="card">
+            <h3>🤖 Qualidade de Dados & IA <span class="badge">Python</span></h3>
+            <p>Pipelines de validação e métricas automatizadas para assegurar a integridade de dados alimentados em modelos analíticos.</p>
         </div>
 
-    </section>
-
+        <footer>
+            <p>© 2026 Francieli Engmam • <a href="https://github.com/francieliengmam/francieliengmam" target="_blank" style="color: var(--accent-color);">Ver Perfil do GitHub</a></p>
+        </footer>
+    </div>
 </body>
 </html>
