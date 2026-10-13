@@ -115,16 +115,14 @@
             padding-bottom: 90px;
         }
 
+        /* NOME MAIOR E 100% EM BRANCO */
         .hero-name {
-            font-size: 2.2rem;
+            font-size: 3.2rem;
             font-weight: 800;
-            color: var(--text-white);
-            letter-spacing: -0.02em;
-            margin-bottom: 12px;
-        }
-
-        .hero-name span {
-            color: var(--accent-purple);
+            color: #ffffff;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            line-height: 1.1;
         }
 
         .hero-badge {
@@ -439,6 +437,7 @@
         }
 
         @media (max-width: 768px) {
+            .hero-name { font-size: 2.4rem; }
             .hero-title { font-size: 2.3rem; }
             .about-grid { grid-template-columns: 1fr; }
             .metrics-container { grid-template-columns: 1fr; }
@@ -467,11 +466,11 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h2 class="hero-name">Francieli <span>Engmam</span></h2>
+            <h1 class="hero-name">Francieli Engmam</h1>
             <div class="hero-badge">Data Analytics & Business Intelligence</div>
-            <h1 class="hero-title">
+            <h2 class="hero-title">
                 Turning Operational Complexity into <span class="highlight">Executive Intelligence</span>
-            </h1>
+            </h2>
             <p class="hero-subtitle">
                 Senior Data & BI Specialist with extensive expertise across Automotive OEM Supply Chains, Logistics SLA Optimization, Equipment Downtime Analytics, and AI Data Integrity.
             </p>
