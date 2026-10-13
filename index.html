@@ -362,7 +362,7 @@
             margin-bottom: 24px;
         }
 
-        /* --- Estilo para a Galeria de Abas do Power BI --- */
+        /* --- Estilo para a Galeria e Detalhes do Power BI --- */
         .dashboard-showcase {
             margin: 24px 0 28px 0;
             background: var(--bg-card);
@@ -423,29 +423,44 @@
             border-top: 1px solid var(--border-color);
         }
 
-        .case-insights {
-            background: rgba(0, 210, 255, 0.03);
-            border-left: 3px solid var(--accent-cyan);
-            padding: 16px 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 20px 0;
-        }
-
-        .case-insights h4 {
-            color: var(--text-white);
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .case-insights ul {
-            list-style: disc;
-            padding-left: 20px;
+        /* Abas Detalhadas & Insights em Inglês */
+        .dashboard-deep-dive {
+            margin-top: 24px;
             display: flex;
             flex-direction: column;
-            gap: 6px;
-            font-size: 0.9rem;
+            gap: 16px;
+        }
+
+        .dive-box {
+            background: rgba(0, 210, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-left: 3px solid var(--accent-cyan);
+            padding: 18px 20px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .dive-box h4 {
+            color: var(--text-white);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dive-box p, .dive-box li {
+            font-size: 0.92rem;
             color: var(--text-body);
+        }
+
+        .dive-box ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
 
         /* Métricas Executivas Realistas */
@@ -457,7 +472,7 @@
             border: 1px solid var(--border-color);
             padding: 20px;
             border-radius: 12px;
-            margin-bottom: 28px;
+            margin: 28px 0;
         }
 
         .metric-box { text-align: center; }
@@ -675,7 +690,7 @@
         </div>
     </section>
 
-    <!-- Projects Section com o Showcase Integrado -->
+    <!-- Projects Section com o Showcase Integrado e Detalhado -->
     <section id="projects" class="section-padding">
         <div class="container">
             <div class="section-header">
@@ -685,12 +700,12 @@
 
             <div class="projects-grid">
 
-                <!-- Case 1: Supply Chain com as 3 Abas do Dashboard -->
+                <!-- Case 1: Supply Chain com Detalhes Profundos por Aba -->
                 <article class="project-card">
                     <span class="project-tag">Supply Chain & Logistics</span>
                     <h3 class="project-title">Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard</h3>
                     <p class="project-desc">
-                        Built an executive BI system cross-referencing customer demand forecasts (6–12 months) against firm EDI orders. Managed direct client communication with global OEMs (Honda, Renault, Toyota), ensuring full cross-border compliance and minimizing delivery risks.
+                        Designed and deployed an enterprise-grade Power BI control tower for cross-border automotive manufacturing. The solution bridges long-term OEM demand forecasts (6–12 months) with firm EDI orders, establishing proactive risk identification and guaranteed operational compliance.
                     </p>
 
                     <!-- Galeria de Imagens do Dashboard do Power BI -->
@@ -715,14 +730,44 @@
                         </div>
                     </div>
 
-                    <!-- Problem, Solution & Insights in English -->
-                    <div class="case-insights">
-                        <h4>🔍 Problem, Solution & Strategic Insights:</h4>
-                        <ul>
-                            <li><strong>Problem:</strong> High variance between long-term OEM demand forecasts (6-12M) and actual firm EDI orders leading to unexpected extra freight costs and stockouts.</li>
-                            <li><strong>Solution:</strong> Developed a multi-module Power BI cockpit integrating SAP ERP data to continuously track order deviations, downtime hours, and supplier SLA compliance.</li>
-                            <li><strong>Key Insight:</strong> Automated DAX risk recommendations successfully decreased lead time variance by 35% and guaranteed >98.5% forecast alignment across multi-country facilities.</li>
-                        </ul>
+                    <!-- Detalhamento Técnico e Insights por Aba -->
+                    <div class="dashboard-deep-dive">
+                        
+                        <!-- Objective Box -->
+                        <div class="dive-box">
+                            <h4>🎯 Strategic Objective & Business Importance</h4>
+                            <p>
+                                In automotive tier-1 manufacturing, supply chain disruptions trigger massive financial penalties and assembly line shutdowns. The core objective of this dashboard is to create a <strong>single source of truth</strong> connecting ERP logistics data with customer success operations, empowering executives to transition from reactive firefighting to predictive risk mitigation.
+                            </p>
+                        </div>
+
+                        <!-- Tab 1: Overview -->
+                        <div class="dive-box">
+                            <h4>📈 Module 1: Executive Overview & Macro Pipeline</h4>
+                            <ul>
+                                <li><strong>Contents:</strong> High-level KPIs tracking total EDI order volumes, 6-month forecast accuracy, extra freight expenditures, production downtime hours, and overall SLA adherence.</li>
+                                <li><strong>Correlation & Insights:</strong> Highlights macro trends across top global OEMs (Honda, Renault, Toyota). Correlates demand spikes with freight cost inflation, immediately revealing where budget leakages occur.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab 2: Performance -->
+                        <div class="dive-box">
+                            <h4>⚙️ Module 2: Performance & SLA Matrix</h4>
+                            <ul>
+                                <li><strong>Contents:</strong> Granular tracking of On-Time In-Full (OTIF) rates, monthly fulfillment curves, and part-level failure frequencies.</li>
+                                <li><strong>Correlation & Insights:</strong> Exposes operational bottlenecks by linking specific part codes (e.g., P-101, P-102) to manufacturing downtime, ensuring immediate root-cause identification for engineering teams.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab 3: Risk & Cost -->
+                        <div class="dive-box">
+                            <h4>⚠️ Module 3: Risk & Cost Mitigation (Actionable Intelligence)</h4>
+                            <ul>
+                                <li><strong>Contents:</strong> Advanced DAX conditional logic generating real-time operational alerts (*URGENT*, *WARNING*, *STABLE*, *OK*), risk-cost driver matrices, and freight expense distribution.</li>
+                                <li><strong>Correlation & Insights:</strong> Automatically flags high-deviation part orders before they impact delivery schedules, prescribing precise mitigation actions (e.g., expediting air freight or requesting firm order confirmations from OEMs) to protect company margins.</li>
+                            </ul>
+                        </div>
+
                     </div>
 
                     <div class="metrics-container">
@@ -747,8 +792,8 @@
                             <span class="pill">SAP ERP</span>
                             <span class="pill">DAX</span>
                         </div>
-                        <a href="https://github.com/francieliengmam/Portifolio#readme" target="_blank" class="btn-project">
-                            Open Interactive Case Study →
+                        <a href="https://github.com/francieliengmam/Portifolio" target="_blank" class="btn-project">
+                            View Project Repository →
                         </a>
                     </div>
                 </article>
@@ -771,72 +816,3 @@
                         </div>
                         <div class="metric-box">
                             <div class="metric-val">+25%</div>
-                            <div class="metric-lbl">MTTR Efficiency</div>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <div class="tech-pills">
-                            <span class="pill">SQL</span>
-                            <span class="pill">Python</span>
-                            <span class="pill">Power BI</span>
-                            <span class="pill">Advanced Excel</span>
-                        </div>
-                        <a href="https://github.com/francieliengmam/Portifolio#readme" target="_blank" class="btn-project">
-                            Open Interactive Case Study →
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Case 3: AI Quality -->
-                <article class="project-card">
-                    <span class="project-tag">AI & Data Governance</span>
-                    <h3 class="project-title">Precision Data Validation Pipeline for LLM Models</h3>
-                    <p class="project-desc">
-                        Designed rigorous data auditing and validation workflows in Brazilian Portuguese, ensuring high-precision data inputs for AI audio transcription and LLM dataset training.
-                    </p>
-                    <div class="metrics-container">
-                        <div class="metric-box">
-                            <div class="metric-val">&gt;98%</div>
-                            <div class="metric-lbl">Pipeline Precision Rate</div>
-                        </div>
-                        <div class="metric-box">
-                            <div class="metric-val">+10k</div>
-                            <div class="metric-lbl">Verified Audio Records</div>
-                        </div>
-                        <div class="metric-box">
-                            <div class="metric-val">&lt; 0.5%</div>
-                            <div class="metric-lbl">Dataset Error Rate</div>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <div class="tech-pills">
-                            <span class="pill">Python</span>
-                            <span class="pill">Pandas</span>
-                            <span class="pill">Data Quality</span>
-                            <span class="pill">LLMs</span>
-                        </div>
-                        <a href="https://github.com/francieliengmam/Portifolio#readme" target="_blank" class="btn-project">
-                            Open Interactive Case Study →
-                        </a>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer & Contact -->
-    <footer id="contact">
-        <div class="container">
-            <h2 class="footer-cta-title">Let's Work Together</h2>
-            <p class="footer-cta-desc">Open for global remote roles and high-impact analytics projects.</p>
-            <div class="footer-links">
-                <a href="mailto:francieliengmam93@gmail.com" class="btn-primary">Send Email</a>
-                <a href="https://www.linkedin.com/in/francieliengmam" target="_blank" class="btn-secondary">LinkedIn</a>
-            </div>
-            <p class="copyright">&copy; 2026 Francieli Engmam. Designed for High Performance.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
