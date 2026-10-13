@@ -487,6 +487,9 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 16px;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
         }
 
         .tech-pills {
@@ -502,24 +505,6 @@
             border: 1px solid var(--border-color);
             padding: 4px 12px;
             border-radius: 6px;
-        }
-
-        .btn-project {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--accent-purple);
-            color: var(--text-white);
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.875rem;
-            transition: all 0.2s;
-        }
-
-        .btn-project:hover {
-            background: var(--accent-purple-hover);
-            transform: translateX(2px);
         }
 
         /* --- Footer & Contact --- */
@@ -562,7 +547,6 @@
             .metrics-container { grid-template-columns: 1fr; }
             .sub-dashboards-grid { grid-template-columns: 1fr; }
             .project-footer { flex-direction: column; align-items: flex-start; }
-            .btn-project { width: 100%; justify-content: center; }
             .nav-links { display: none; }
         }
     </style>
@@ -680,7 +664,7 @@
         </div>
     </section>
 
-    <!-- Projects Section com Detalhes Profundos e Narrativa Robusta -->
+    <!-- Projects Section sem botões -->
     <section id="projects" class="section-padding">
         <div class="container">
             <div class="section-header">
@@ -690,7 +674,7 @@
 
             <div class="projects-grid">
 
-                <!-- Case 1: Supply Chain (Narrativa Completa e Profunda) -->
+                <!-- Case 1: Supply Chain -->
                 <article class="project-card">
                     <span class="project-tag">Supply Chain & Logistics</span>
                     <h3 class="project-title">Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard</h3>
@@ -720,7 +704,7 @@
                         </div>
                     </div>
 
-                    <!-- Narrativa Completa, Problema, Raciocínio, Abas e Insights em Inglês -->
+                    <!-- Narrativa Completa -->
                     <div class="case-deep-narrative">
                         
                         <div class="narrative-block">
@@ -783,9 +767,6 @@
                             <span class="pill">SAP ERP</span>
                             <span class="pill">DAX</span>
                         </div>
-                        <a href="https://github.com/francieliengmam/Portifolio" target="_blank" class="btn-project">
-                            View Project Repository →
-                        </a>
                     </div>
                 </article>
 
@@ -817,9 +798,6 @@
                             <span class="pill">Power BI</span>
                             <span class="pill">Advanced Excel</span>
                         </div>
-                        <a href="https://github.com/francieliengmam/Portifolio" target="_blank" class="btn-project">
-                            View Project Repository →
-                        </a>
                     </div>
                 </article>
 
@@ -851,9 +829,6 @@
                             <span class="pill">Data Quality</span>
                             <span class="pill">LLMs</span>
                         </div>
-                        <a href="https://github.com/francieliengmam/Portifolio" target="_blank" class="btn-project">
-                            View Project Repository →
-                        </a>
                     </div>
                 </article>
 
