@@ -111,8 +111,20 @@
 
         /* --- Hero Section --- */
         .hero-section {
-            padding-top: 170px;
+            padding-top: 160px;
             padding-bottom: 90px;
+        }
+
+        .hero-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-white);
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .hero-name span {
+            color: var(--accent-purple);
         }
 
         .hero-badge {
@@ -130,7 +142,7 @@
         }
 
         .hero-title {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 800;
             color: var(--text-white);
             line-height: 1.15;
@@ -145,7 +157,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--text-body);
             max-width: 780px;
             margin-bottom: 36px;
@@ -427,7 +439,7 @@
         }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.4rem; }
+            .hero-title { font-size: 2.3rem; }
             .about-grid { grid-template-columns: 1fr; }
             .metrics-container { grid-template-columns: 1fr; }
             .project-footer { flex-direction: column; align-items: flex-start; }
@@ -445,7 +457,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Tech Stack</a></li>
-                <li><a href="#projects">Portfolio Cases</a></li>
+                <li><a href="#projects">Case Studies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="mailto:francieliengmam93@gmail.com" class="btn-nav">Get In Touch</a>
@@ -455,12 +467,13 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <span class="hero-badge">Data Analytics & Business Intelligence</span>
+            <h2 class="hero-name">Francieli <span>Engmam</span></h2>
+            <div class="hero-badge">Data Analytics & Business Intelligence</div>
             <h1 class="hero-title">
                 Turning Operational Complexity into <span class="highlight">Executive Intelligence</span>
             </h1>
             <p class="hero-subtitle">
-                Senior Analytics & BI Specialist focused on Automotive OEM Supply Chains, Logistics Optimization, Equipment Downtime, and AI Data Integrity[cite: 1, 2, 3].
+                Senior Data & BI Specialist with extensive expertise across Automotive OEM Supply Chains, Logistics SLA Optimization, Equipment Downtime Analytics, and AI Data Integrity.
             </p>
             <div class="hero-cta">
                 <a href="#projects" class="btn-primary">View Case Studies</a>
@@ -479,10 +492,10 @@
             <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        High-precision Data & Business Intelligence Specialist with extensive hands-on experience bridging technical data pipelines with executive leadership demands[cite: 1].
+                        High-precision Data & Business Intelligence Specialist with extensive hands-on experience bridging technical data pipelines with executive leadership demands.
                     </p>
                     <p>
-                        Proven success in auditing high-volume supply chain datasets (SAP, MySQL, Python), detecting anomalies in EDI order forecasts, and mitigating operational downtime for major automotive OEMs and commercial facilities[cite: 1, 2, 3].
+                        Proven success in auditing high-volume supply chain datasets (SAP, MySQL, Python), detecting anomalies in EDI order forecasts, and mitigating operational downtime for major automotive OEMs and commercial facilities.
                     </p>
                 </div>
                 <ul class="info-list">
@@ -529,15 +542,15 @@
                 </div>
                 <div class="skill-card">
                     <h4>Supply Chain & ERP</h4>
-                    <p>SAP ERP master data, EDI demand forecast & cross-border logistics[cite: 2].</p>
+                    <p>SAP ERP master data, EDI demand forecast & cross-border logistics.</p>
                 </div>
                 <div class="skill-card">
                     <h4>KPI Engineering</h4>
-                    <p>SLA tracking, equipment downtime metrics & variance analysis[cite: 3].</p>
+                    <p>SLA tracking, equipment downtime metrics & variance analysis.</p>
                 </div>
                 <div class="skill-card">
                     <h4>AI & Data Quality</h4>
-                    <p>Audio transcription validation, schema rules & LLM datasets[cite: 3].</p>
+                    <p>Audio transcription validation, schema rules & LLM datasets.</p>
                 </div>
             </div>
         </div>
@@ -558,7 +571,7 @@
                     <span class="project-tag">Supply Chain & Logistics</span>
                     <h3 class="project-title">Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard</h3>
                     <p class="project-desc">
-                        Built an executive BI system cross-referencing customer demand forecasts (6–12 months) against firm EDI orders[cite: 2]. Cross-checked international shipping docs (US, Thailand, France) to eliminate assembly line shutdowns for global OEM clients[cite: 2].
+                        Built an executive BI system cross-referencing customer demand forecasts (6–12 months) against firm EDI orders. Cross-checked international shipping docs (US, Thailand, France) to eliminate assembly line shutdowns for global OEM clients.
                     </p>
                     <div class="metrics-container">
                         <div class="metric-box">
@@ -592,7 +605,7 @@
                     <span class="project-tag">Operations & Maintenance</span>
                     <h3 class="project-title">Supermarket Equipment Downtime & Vendor SLA Tracking</h3>
                     <p class="project-desc">
-                        Engineered operational tracking models to monitor equipment failure rates, repair frequencies, and supplier SLAs across retail facilities, achieving drastic downtime reductions[cite: 3].
+                        Engineered operational tracking models to monitor equipment failure rates, repair frequencies, and supplier SLAs across retail facilities, achieving drastic downtime reductions.
                     </p>
                     <div class="metrics-container">
                         <div class="metric-box">
@@ -626,7 +639,7 @@
                     <span class="project-tag">AI & Data Governance</span>
                     <h3 class="project-title">Precision Data Validation Pipeline for LLM Models</h3>
                     <p class="project-desc">
-                        Designed rigorous data auditing and validation workflows in Brazilian Portuguese, ensuring millisecond-level precision for AI audio transcription and LLM dataset training[cite: 3].
+                        Designed rigorous data auditing and validation workflows in Brazilian Portuguese, ensuring millisecond-level precision for AI audio transcription and LLM dataset training.
                     </p>
                     <div class="metrics-container">
                         <div class="metric-box">
