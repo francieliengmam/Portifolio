@@ -4,112 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francieli Engmam | Data & Business Intelligence Analyst</title>
-    <!-- Google Fonts & Tailwind CSS para um design profissional e limpo -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #08090d;
+            color: #f3f4f6;
+        }
+        .glow-button {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+        }
+        .glass-card {
+            background: rgba(15, 17, 26, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
 
-    <!-- Header / Hero Section -->
-    <header class="max-w-5xl mx-auto px-6 py-16 md:py-24 flex flex-col items-start">
-        <span class="text-indigo-400 font-semibold tracking-wide text-sm uppercase mb-2">Data Analytics & Business Intelligence</span>
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">Francieli Engmam</h1>
-        <p class="text-xl text-gray-400 max-w-2xl mb-8">
-            Transforming complex operational data and supply chain workflows into actionable executive insights through interactive dashboards, SQL modeling, and Python.
-        </p>
-        <div class="flex flex-wrap gap-4">
-            <a href="https://linkedin.com/in/francieliengmam" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-3 rounded-lg transition duration-200">LinkedIn Profile</a>
-            <a href="mailto:francieliengmam93@gmail.com" class="bg-gray-800 hover:bg-gray-700 text-gray-300 font-medium px-6 py-3 rounded-lg transition duration-200">Get in Touch</a>
+    <!-- HERO SECTION -->
+    <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center flex flex-col items-center">
+        
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-4">
+            Francieli Engmam
+        </h1>
+        
+        <div class="inline-block px-4 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 mb-6">
+            <span class="text-xs md:text-sm font-semibold tracking-wider text-teal-400 uppercase">
+                DATA & BUSINESS INTELLIGENCE ANALYST
+            </span>
         </div>
-    </header>
 
-    <!-- Main Container -->
-    <main class="max-w-5xl mx-auto px-6 pb-24 space-y-16">
+        <h2 class="text-3xl md:text-5xl font-bold max-w-4xl leading-tight mb-6">
+            Turning Operational Data into <span class="gradient-text">Actionable Business Intelligence</span>
+        </h2>
 
-        <!-- Technical Stack -->
-        <section>
-            <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-3">Technical Stack</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
-                    <h3 class="font-semibold text-indigo-400 mb-2">Data Visualization & BI</h3>
-                    <p class="text-sm text-gray-400">Power BI, DAX Modeling, Advanced Excel, Interactive Dashboards & Executive Reporting.</p>
-                </div>
-                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
-                    <h3 class="font-semibold text-indigo-400 mb-2">Database & Querying</h3>
-                    <p class="text-sm text-gray-400">SQL Queries, Data Hygiene, Segmentation, Data Extensions & ETL workflows.</p>
-                </div>
-                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
-                    <h3 class="font-semibold text-indigo-400 mb-2">Programming & Automation</h3>
-                    <p class="text-sm text-gray-400">Python (Pandas), Power Automate, Automated Workflows, and CRM integration.</p>
+        <p class="text-gray-400 text-lg max-w-2xl mb-10 font-normal">
+            Data Analyst & Business Intelligence Specialist transforming complex supply chain workflows, B2B account metrics, and operational datasets into high-impact interactive dashboards and automated models.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#projects" class="glow-button text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                View Case Studies
+            </a>
+            <a href="https://linkedin.com/in/francieliengmam" target="_blank" class="glass-card hover:bg-white/5 text-gray-200 font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 border border-white/10">
+                LinkedIn Profile
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="max-w-5xl mx-auto px-6 py-12">
+        <h2 class="text-3xl font-extrabold text-white mb-8">About Me</h2>
+
+        <div class="glass-card rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            
+            <!-- Foto de Perfil -->
+            <div class="md:col-span-5 flex justify-center">
+                <img src="profile.jpg" alt="Francieli Engmam" class="rounded-2xl w-full max-w-xs object-cover shadow-2xl border border-white/10">
+            </div>
+
+            <!-- Informações e Descrição -->
+            <div class="md:col-span-7 space-y-6">
+                <p class="text-gray-300 leading-relaxed">
+                    Results-driven Data Analyst and Operations Specialist with a solid background in Business Administration, bridging high-precision data analytics with supply chain and CRM intelligence.
+                </p>
+                <p class="text-gray-300 leading-relaxed">
+                    Specialized in constructing interactive Power BI dashboards, SQL queries, DAX modeling, and predictive Excel panels. Proven track record partnering with C-suite executives and major B2B accounts to drive data hygiene, process automation, and operational efficiency.
+                </p>
+
+                <!-- Tabela de Detalhes -->
+                <div class="space-y-3 pt-2 text-sm border-t border-white/10">
+                    <div class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-gray-400">Role:</span>
+                        <span class="font-semibold text-white">Data & Business Intelligence Analyst</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-gray-400">Core Focus:</span>
+                        <span class="font-semibold text-white">Power BI Dashboards, SQL Analytics & Supply Chain BI</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-gray-400">Key Tools:</span>
+                        <span class="font-semibold text-white">Power BI, SQL, Python, Excel (DAX/VBA), Salesforce, HubSpot</span>
+                    </div>
+                    <div class="flex justify-between pb-1">
+                        <span class="text-gray-400">Languages:</span>
+                        <span class="font-semibold text-white">English (Advanced), Portuguese (Native)</span>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Featured Projects -->
-        <section>
-            <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-3">Data Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <!-- Project 1 -->
-                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800 flex flex-col justify-between">
-                    <div>
-                        <div class="text-xs text-indigo-400 font-semibold mb-1">Power BI & Supply Chain</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Supply Chain & EDI Logistics Dashboard</h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            Interactive Power BI solution designed to monitor supply chain metrics, order fulfillment rates, and inventory status, providing real-time visibility for operational decision-making.
-                        </p>
-                    </div>
-                    <span class="text-xs text-gray-500 font-mono">Tools: Power BI, DAX, Excel</span>
-                </div>
+        </div>
+    </section>
 
-                <!-- Project 2 -->
-                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800 flex flex-col justify-between">
-                    <div>
-                        <div class="text-xs text-indigo-400 font-semibold mb-1">CRM Analytics</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Lifecycle Campaign & Data Hygiene Analytics</h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            Auditing and segmentation framework using SQL and Salesforce Marketing Cloud data extensions to analyze subscriber list health, engagement KPIs, and campaign conversion rates.
-                        </p>
-                    </div>
-                    <span class="text-xs text-gray-500 font-mono">Tools: SQL, Salesforce Marketing Cloud, Excel</span>
-                </div>
+    <!-- CASE STUDIES / DASHBOARD SECTION -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-12">
+        <div class="mb-8">
+            <span class="text-xs font-semibold tracking-wider text-teal-400 uppercase">SUPPLY CHAIN & DATA ANALYTICS</span>
+            <h2 class="text-3xl font-extrabold text-white mt-1">Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard</h2>
+            <p class="text-gray-400 mt-2">Engineered an enterprise-grade BI Control Tower connecting SAP ERP logistics pipelines with global OEM customer success frameworks.</p>
+        </div>
 
+        <!-- Dashboard Card -->
+        <div class="glass-card rounded-2xl p-6 md:p-8 space-y-6">
+            <div class="flex items-center space-x-2 text-xs font-bold tracking-wider text-gray-400 uppercase">
+                <span>📊 INTERACTIVE POWER BI COCKPIT VIEWS</span>
             </div>
-        </section>
 
-        <!-- Professional Experience Summary -->
-        <section>
-            <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-3">Professional Experience</h2>
-            <div class="space-y-6">
-                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                        <h3 class="text-lg font-bold text-white">Operations & CRM Data Analyst</h3>
-                        <span class="text-sm text-indigo-400">2024 – Present | Independent Consultant</span>
-                    </div>
-                    <p class="text-gray-400 text-sm">
-                        Managing high-volume campaign operations, data hygiene pipelines, and audience segmentation via Salesforce Marketing Cloud, turning raw metrics into interactive executive Power BI reports.
-                    </p>
+            <!-- Dashboard Placeholder/Image -->
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-gray-900">
+                <img src="dashboard.png" alt="Power BI Dashboard" class="w-full object-cover">
+            </div>
+
+            <!-- Métricas em destaque -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+                <div class="glass-card p-4 rounded-xl text-center">
+                    <div class="text-2xl font-bold text-emerald-400">-35%</div>
+                    <div class="text-xs text-gray-400 mt-1">Lead Time Variance</div>
                 </div>
-
-                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                        <h3 class="text-lg font-bold text-white">Customer Support & CRM Operations Specialist</h3>
-                        <span class="text-sm text-indigo-400">2021 – 2024 | NTN bearings do Brasil</span>
-                    </div>
-                    <p class="text-gray-400 text-sm">
-                        Served as primary liaison for global automotive OEMs, building custom predictive dashboards and control panels in Excel and Power BI to optimize account management and supply chain visibility.
-                    </p>
+                <div class="glass-card p-4 rounded-xl text-center">
+                    <div class="text-2xl font-bold text-emerald-400">>98.5%</div>
+                    <div class="text-xs text-gray-400 mt-1">Forecast Alignment</div>
+                </div>
+                <div class="glass-card p-4 rounded-xl text-center">
+                    <div class="text-2xl font-bold text-emerald-400">3 Countries</div>
+                    <div class="text-xs text-gray-400 mt-1">Audited Pipeline</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-gray-800 py-8 text-center text-gray-500 text-sm">
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 py-10 text-center text-gray-500 text-sm mt-12">
         <p>&copy; 2026 Francieli Engmam. Built with GitHub Pages.</p>
     </footer>
 
