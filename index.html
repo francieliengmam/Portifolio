@@ -71,7 +71,7 @@
 
         <div class="glass-card rounded-2xl p-5 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
             
-            <!-- Foto de Perfil (Apontando para o ficheiro correto no GitHub: perfil.jpg.jfif) -->
+            <!-- Foto de Perfil -->
             <div class="md:col-span-5 flex justify-center w-full">
                 <div class="relative w-64 h-64 rounded-2xl overflow-hidden border border-white/10 bg-gray-800 shadow-2xl flex items-center justify-center">
                     <img src="perfil.jpg.jfif" alt="Francieli Engmam" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80';">
@@ -111,45 +111,61 @@
         </div>
     </section>
 
-    <!-- CASE STUDIES / DASHBOARD SECTION -->
-    <section id="projects" class="w-full max-w-5xl mx-auto px-4 sm:px-6 py-8">
-        <div class="mb-6 w-full">
+    <!-- CASE STUDIES / DASHBOARD SECTIONS -->
+    <section id="projects" class="w-full max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-12">
+        
+        <div class="text-center md:text-left">
             <span class="text-xs font-semibold tracking-wider text-teal-400 uppercase">SUPPLY CHAIN & DATA ANALYTICS</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1 break-words">
-                Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard
-            </h2>
-            <p class="text-gray-400 mt-2 text-sm sm:text-base leading-relaxed break-words">
-                Engineered an enterprise-grade BI Control Tower connecting SAP ERP logistics pipelines with global OEM customer success frameworks.
-            </p>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Automotive OEM Supply Chain Control Tower</h2>
+            <p class="text-gray-400 mt-2 text-sm sm:text-base">Interactive enterprise-grade Power BI solution connecting SAP ERP logistics with global OEM frameworks.</p>
         </div>
 
-        <!-- Dashboard Card -->
+        <!-- Module 1: Overview -->
         <div class="glass-card rounded-2xl p-4 sm:p-8 space-y-6 w-full">
-            <div class="flex items-center space-x-2 text-xs font-bold tracking-wider text-gray-400 uppercase">
-                <span>📊 INTERACTIVE POWER BI COCKPIT VIEWS</span>
+            <div class="flex items-center space-x-2 text-xs font-bold tracking-wider text-teal-400 uppercase">
+                <span>📊 Module 1: Supply Chain Overview</span>
             </div>
-
-            <!-- Dashboard Image Container (Apontando para overview.png.JPG) -->
             <div class="rounded-xl overflow-hidden border border-white/10 bg-gray-900 w-full">
-                <img src="overview.png.JPG" alt="Power BI Dashboard" class="w-full h-auto object-cover">
-            </div>
-
-            <!-- Métricas em Destaque -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-xl sm:text-2xl font-bold text-emerald-400">-35%</div>
-                    <div class="text-xs text-gray-400 mt-1">Lead Time Variance</div>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-xl sm:text-2xl font-bold text-emerald-400">&gt;98.5%</div>
-                    <div class="text-xs text-gray-400 mt-1">Forecast Alignment</div>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-xl sm:text-2xl font-bold text-emerald-400">3 Countries</div>
-                    <div class="text-xs text-gray-400 mt-1">Audited Pipeline</div>
-                </div>
+                <img src="overview.png.JPG" alt="Supply Chain Overview Dashboard" class="w-full h-auto object-cover">
             </div>
         </div>
+
+        <!-- Module 2: Performance & SLA Matrix -->
+        <div class="glass-card rounded-2xl p-4 sm:p-8 space-y-6 w-full">
+            <div class="flex items-center space-x-2 text-xs font-bold tracking-wider text-teal-400 uppercase">
+                <span>📈 Module 2: Performance & SLA Matrix</span>
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-gray-900 w-full">
+                <img src="performance.png.JPG" alt="Performance and SLA Matrix Dashboard" class="w-full h-auto object-cover">
+            </div>
+        </div>
+
+        <!-- Module 3: Risk & Cost Actionable Alerts -->
+        <div class="glass-card rounded-2xl p-4 sm:p-8 space-y-6 w-full">
+            <div class="flex items-center space-x-2 text-xs font-bold tracking-wider text-teal-400 uppercase">
+                <span>🚨 Module 3: Risk & Cost Actionable Alerts</span>
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-gray-900 w-full">
+                <img src="risk-cost.png.JPG" alt="Risk and Cost Actionable Alerts Dashboard" class="w-full h-auto object-cover">
+            </div>
+        </div>
+
+        <!-- Métricas Globais em Destaque -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            <div class="glass-card p-4 rounded-xl text-center">
+                <div class="text-xl sm:text-2xl font-bold text-emerald-400">-35%</div>
+                <div class="text-xs text-gray-400 mt-1">Lead Time Variance</div>
+            </div>
+            <div class="glass-card p-4 rounded-xl text-center">
+                <div class="text-xl sm:text-2xl font-bold text-emerald-400">&gt;98.5%</div>
+                <div class="text-xs text-gray-400 mt-1">Forecast Alignment</div>
+            </div>
+            <div class="glass-card p-4 rounded-xl text-center">
+                <div class="text-xl sm:text-2xl font-bold text-emerald-400">3 Countries</div>
+                <div class="text-xs text-gray-400 mt-1">Audited Pipeline</div>
+            </div>
+        </div>
+
     </section>
 
     <!-- FOOTER -->
