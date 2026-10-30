@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #08090d;
             color: #f3f4f6;
+            overflow-x: hidden;
         }
         .glow-button {
             background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
@@ -34,72 +35,74 @@
 <body class="antialiased selection:bg-indigo-500 selection:text-white">
 
     <!-- HERO SECTION -->
-    <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center flex flex-col items-center">
+    <section class="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-12 text-center flex flex-col items-center">
         
-        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-4">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-4 break-words w-full">
             Francieli Engmam
         </h1>
         
         <div class="inline-block px-4 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 mb-6">
-            <span class="text-xs md:text-sm font-semibold tracking-wider text-teal-400 uppercase">
+            <span class="text-xs sm:text-sm font-semibold tracking-wider text-teal-400 uppercase">
                 DATA & BUSINESS INTELLIGENCE ANALYST
             </span>
         </div>
 
-        <h2 class="text-3xl md:text-5xl font-bold max-w-4xl leading-tight mb-6">
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold max-w-4xl leading-tight mb-6 break-words w-full">
             Turning Operational Data into <span class="gradient-text">Actionable Business Intelligence</span>
         </h2>
 
-        <p class="text-gray-400 text-lg max-w-2xl mb-10 font-normal">
+        <p class="text-gray-400 text-base sm:text-lg max-w-2xl mb-8 font-normal leading-relaxed">
             Data Analyst & Business Intelligence Specialist transforming complex supply chain workflows, B2B account metrics, and operational datasets into high-impact interactive dashboards and automated models.
         </p>
 
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#projects" class="glow-button text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+        <div class="flex flex-wrap justify-center gap-4 w-full">
+            <a href="#projects" class="glow-button text-white font-semibold px-6 sm:px-8 py-3.5 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
                 View Case Studies
             </a>
-            <a href="https://linkedin.com/in/francieliengmam" target="_blank" class="glass-card hover:bg-white/5 text-gray-200 font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 border border-white/10">
+            <a href="https://linkedin.com/in/francieliengmam" target="_blank" class="glass-card hover:bg-white/5 text-gray-200 font-semibold px-6 sm:px-8 py-3.5 rounded-xl transition-all duration-300 border border-white/10">
                 LinkedIn Profile
             </a>
         </div>
     </section>
 
     <!-- ABOUT ME SECTION -->
-    <section class="max-w-5xl mx-auto px-6 py-12">
-        <h2 class="text-3xl font-extrabold text-white mb-8">About Me</h2>
+    <section class="w-full max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-6">About Me</h2>
 
-        <div class="glass-card rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="glass-card rounded-2xl p-5 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
             
-            <!-- Foto de Perfil -->
-            <div class="md:col-span-5 flex justify-center">
-                <img src="profile.jpg" alt="Francieli Engmam" class="rounded-2xl w-full max-w-xs object-cover shadow-2xl border border-white/10">
+            <!-- Foto de Perfil Corrigida -->
+            <div class="md:col-span-5 flex justify-center w-full">
+                <div class="relative w-64 h-64 rounded-2xl overflow-hidden border border-white/10 bg-gray-800 shadow-2xl flex items-center justify-center">
+                    <img src="profile.jpg" alt="Francieli Engmam" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80';">
+                </div>
             </div>
 
             <!-- Informações e Descrição -->
-            <div class="md:col-span-7 space-y-6">
-                <p class="text-gray-300 leading-relaxed">
+            <div class="md:col-span-7 space-y-4 sm:space-y-6 w-full">
+                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
                     Results-driven Data Analyst and Operations Specialist with a solid background in Business Administration, bridging high-precision data analytics with supply chain and CRM intelligence.
                 </p>
-                <p class="text-gray-300 leading-relaxed">
+                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
                     Specialized in constructing interactive Power BI dashboards, SQL queries, DAX modeling, and predictive Excel panels. Proven track record partnering with C-suite executives and major B2B accounts to drive data hygiene, process automation, and operational efficiency.
                 </p>
 
                 <!-- Tabela de Detalhes -->
-                <div class="space-y-3 pt-2 text-sm border-t border-white/10">
-                    <div class="flex justify-between border-b border-white/5 pb-2">
-                        <span class="text-gray-400">Role:</span>
+                <div class="space-y-3 pt-2 text-xs sm:text-sm border-t border-white/10">
+                    <div class="flex flex-col sm:flex-row sm:justify-between border-b border-white/5 pb-2">
+                        <span class="text-gray-400 mb-1 sm:mb-0">Role:</span>
                         <span class="font-semibold text-white">Data & Business Intelligence Analyst</span>
                     </div>
-                    <div class="flex justify-between border-b border-white/5 pb-2">
-                        <span class="text-gray-400">Core Focus:</span>
+                    <div class="flex flex-col sm:flex-row sm:justify-between border-b border-white/5 pb-2">
+                        <span class="text-gray-400 mb-1 sm:mb-0">Core Focus:</span>
                         <span class="font-semibold text-white">Power BI Dashboards, SQL Analytics & Supply Chain BI</span>
                     </div>
-                    <div class="flex justify-between border-b border-white/5 pb-2">
-                        <span class="text-gray-400">Key Tools:</span>
+                    <div class="flex flex-col sm:flex-row sm:justify-between border-b border-white/5 pb-2">
+                        <span class="text-gray-400 mb-1 sm:mb-0">Key Tools:</span>
                         <span class="font-semibold text-white">Power BI, SQL, Python, Excel (DAX/VBA), Salesforce, HubSpot</span>
                     </div>
-                    <div class="flex justify-between pb-1">
-                        <span class="text-gray-400">Languages:</span>
+                    <div class="flex flex-col sm:flex-row sm:justify-between pb-1">
+                        <span class="text-gray-400 mb-1 sm:mb-0">Languages:</span>
                         <span class="font-semibold text-white">English (Advanced), Portuguese (Native)</span>
                     </div>
                 </div>
@@ -109,36 +112,40 @@
     </section>
 
     <!-- CASE STUDIES / DASHBOARD SECTION -->
-    <section id="projects" class="max-w-5xl mx-auto px-6 py-12">
-        <div class="mb-8">
+    <section id="projects" class="w-full max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div class="mb-6 w-full">
             <span class="text-xs font-semibold tracking-wider text-teal-400 uppercase">SUPPLY CHAIN & DATA ANALYTICS</span>
-            <h2 class="text-3xl font-extrabold text-white mt-1">Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard</h2>
-            <p class="text-gray-400 mt-2">Engineered an enterprise-grade BI Control Tower connecting SAP ERP logistics pipelines with global OEM customer success frameworks.</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1 break-words">
+                Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard
+            </h2>
+            <p class="text-gray-400 mt-2 text-sm sm:text-base leading-relaxed break-words">
+                Engineered an enterprise-grade BI Control Tower connecting SAP ERP logistics pipelines with global OEM customer success frameworks.
+            </p>
         </div>
 
         <!-- Dashboard Card -->
-        <div class="glass-card rounded-2xl p-6 md:p-8 space-y-6">
+        <div class="glass-card rounded-2xl p-4 sm:p-8 space-y-6 w-full">
             <div class="flex items-center space-x-2 text-xs font-bold tracking-wider text-gray-400 uppercase">
                 <span>📊 INTERACTIVE POWER BI COCKPIT VIEWS</span>
             </div>
 
-            <!-- Dashboard Placeholder/Image -->
-            <div class="rounded-xl overflow-hidden border border-white/10 bg-gray-900">
-                <img src="dashboard.png" alt="Power BI Dashboard" class="w-full object-cover">
+            <!-- Dashboard Image Container -->
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-gray-900 w-full">
+                <img src="dashboard.png" alt="Power BI Dashboard" class="w-full h-auto object-cover">
             </div>
 
-            <!-- Métricas em destaque -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+            <!-- Métricas em Destaque -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
                 <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-2xl font-bold text-emerald-400">-35%</div>
+                    <div class="text-xl sm:text-2xl font-bold text-emerald-400">-35%</div>
                     <div class="text-xs text-gray-400 mt-1">Lead Time Variance</div>
                 </div>
                 <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-2xl font-bold text-emerald-400">>98.5%</div>
+                    <div class="text-xl sm:text-2xl font-bold text-emerald-400">&gt;98.5%</div>
                     <div class="text-xs text-gray-400 mt-1">Forecast Alignment</div>
                 </div>
                 <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-2xl font-bold text-emerald-400">3 Countries</div>
+                    <div class="text-xl sm:text-2xl font-bold text-emerald-400">3 Countries</div>
                     <div class="text-xs text-gray-400 mt-1">Audited Pipeline</div>
                 </div>
             </div>
@@ -146,7 +153,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-white/10 py-10 text-center text-gray-500 text-sm mt-12">
+    <footer class="border-t border-white/10 py-8 text-center text-gray-500 text-xs sm:text-sm mt-12">
         <p>&copy; 2026 Francieli Engmam. Built with GitHub Pages.</p>
     </footer>
 
