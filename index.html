@@ -3,748 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Francieli Engmam | Campaign Specialist & SFMC Expert</title>
-    <!-- Google Fonts Executivas e Modernas -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Francieli Engmam | Data & Business Intelligence Analyst</title>
+    <!-- Google Fonts & Tailwind CSS para um design profissional e limpo -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --bg-dark: #090a10;
-            --bg-surface: #121420;
-            --bg-card: #191c2e;
-            --border-color: #272b43;
-            --border-hover: #5b6294;
-            
-            --text-white: #ffffff;
-            --text-body: #a2a8cc;
-            --text-muted: #656b96;
-            
-            --accent-purple: #7047eb;
-            --accent-purple-hover: #8862f9;
-            --accent-cyan: #00d2ff;
-            --accent-green: #00e6a8;
-            
-            --font-main: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-body);
-            font-family: var(--font-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a { text-decoration: none; color: inherit; }
-
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(9, 10, 16, 0.85);
-            backdrop-filter: blur(12px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .brand-logo {
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--text-white);
-            letter-spacing: -0.02em;
-        }
-
-        .brand-logo span { color: var(--accent-purple); }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--text-body);
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover { color: var(--accent-cyan); }
-
-        .btn-nav {
-            background: var(--accent-purple);
-            color: var(--text-white);
-            padding: 8px 18px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: background 0.2s;
-        }
-
-        .btn-nav:hover { background: var(--accent-purple-hover); }
-
-        .hero-section {
-            padding-top: 170px;
-            padding-bottom: 90px;
-            text-align: center;
-        }
-
-        .hero-name {
-            font-size: 3.8rem;
-            font-weight: 800;
-            color: #ffffff !important;
-            letter-spacing: -0.03em;
-            margin-bottom: 16px;
-            line-height: 1.1;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            background: rgba(0, 210, 255, 0.08);
-            border: 1px solid rgba(0, 210, 255, 0.25);
-            padding: 6px 18px;
-            border-radius: 30px;
-            margin-bottom: 28px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .hero-title {
-            font-size: 3.2rem;
-            font-weight: 800;
-            color: var(--text-white);
-            line-height: 1.15;
-            letter-spacing: -0.03em;
-            margin-bottom: 20px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-title .highlight {
-            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-subtitle {
-            font-size: 1.15rem;
-            color: var(--text-body);
-            max-width: 780px;
-            margin: 0 auto 36px auto;
-            font-weight: 400;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .btn-primary {
-            background: var(--accent-purple);
-            color: var(--text-white);
-            padding: 14px 32px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 20px rgba(112, 71, 235, 0.35);
-            transition: all 0.2s;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-purple-hover);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-white);
-            padding: 14px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
-        }
-
-        .section-padding {
-            padding: 90px 0;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .section-header {
-            margin-bottom: 50px;
-        }
-
-        .section-tag {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--accent-purple);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--text-white);
-            letter-spacing: -0.02em;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 40px;
-            align-items: center;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 40px;
-        }
-
-        .about-img-container {
-            width: 100%;
-            text-align: center;
-        }
-
-        .about-img {
-            width: 100%;
-            max-width: 280px;
-            height: auto;
-            border-radius: 10px;
-            object-fit: cover;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-        }
-
-        .about-content-box {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .about-text p {
-            font-size: 1.05rem;
-            color: var(--text-body);
-            margin-bottom: 16px;
-        }
-
-        .info-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .info-item {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            font-size: 0.95rem;
-        }
-
-        .info-label { color: var(--text-muted); font-weight: 500; }
-        .info-value { color: var(--text-white); font-weight: 600; }
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 16px;
-        }
-
-        .skill-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 12px;
-            transition: all 0.2s;
-        }
-
-        .skill-card:hover {
-            border-color: var(--accent-purple);
-            transform: translateY(-3px);
-        }
-
-        .skill-card h4 {
-            color: var(--text-white);
-            font-size: 1rem;
-            margin-bottom: 6px;
-        }
-
-        .skill-card p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .projects-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        .project-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 40px;
-            transition: all 0.25s;
-        }
-
-        .project-card:hover {
-            border-color: var(--border-hover);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .project-tag {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .project-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--text-white);
-            margin-bottom: 16px;
-        }
-
-        .project-desc {
-            font-size: 1rem;
-            color: var(--text-body);
-            margin-bottom: 24px;
-        }
-
-        .dashboard-showcase {
-            margin: 24px 0 28px 0;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 20px;
-        }
-
-        .showcase-header {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--text-white);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 14px;
-        }
-
-        .main-dashboard-frame {
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-            margin-bottom: 16px;
-        }
-
-        .main-dashboard-frame img, .sub-dashboard-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .sub-dashboards-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .sub-dashboard-card {
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            background: rgba(0,0,0,0.2);
-        }
-
-        .sub-dashboard-card p {
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--text-body);
-            padding: 8px 0;
-            margin: 0;
-            font-weight: 600;
-            background: rgba(25, 28, 46, 0.8);
-            border-top: 1px solid var(--border-color);
-        }
-
-        .case-deep-narrative {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin: 24px 0;
-            background: rgba(0, 210, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--accent-cyan);
-            padding: 24px;
-            border-radius: 0 12px 12px 0;
-        }
-
-        .narrative-block h4 {
-            color: var(--text-white);
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .narrative-block p {
-            font-size: 0.95rem;
-            color: var(--text-body);
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .metrics-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 12px;
-            margin: 28px 0;
-        }
-
-        .metric-box { text-align: center; }
-
-        .metric-val {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--accent-green);
-            line-height: 1.1;
-        }
-
-        .metric-lbl {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 4px;
-            font-weight: 500;
-        }
-
-        .project-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 24px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .tech-pills {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .pill {
-            font-size: 0.8rem;
-            color: var(--text-body);
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-color);
-            padding: 4px 12px;
-            border-radius: 6px;
-        }
-
-        footer {
-            padding: 80px 0 40px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-        }
-
-        .copyright {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        @media (max-width: 768px) {
-            .hero-name { font-size: 2.6rem; }
-            .hero-title { font-size: 2.2rem; }
-            .about-grid { grid-template-columns: 1fr; text-align: center; }
-            .about-img { margin: 0 auto 20px auto; }
-            .metrics-container { grid-template-columns: 1fr; }
-            .sub-dashboards-grid { grid-template-columns: 1fr; }
-            .project-footer { flex-direction: column; align-items: flex-start; }
-            .nav-links { display: none; }
-        }
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body>
+<body class="bg-gray-900 text-gray-100 antialiased">
 
-    <navbar>
-        <div class="container nav-container">
-            <a href="#" class="brand-logo">Francieli<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Tech Stack</a></li>
-                <li><a href="#projects">Case Studies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="mailto:francieliengmam93@gmail.com" class="btn-nav">Get In Touch</a>
+    <!-- Header / Hero Section -->
+    <header class="max-w-5xl mx-auto px-6 py-16 md:py-24 flex flex-col items-start">
+        <span class="text-indigo-400 font-semibold tracking-wide text-sm uppercase mb-2">Data Analytics & Business Intelligence</span>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">Francieli Engmam</h1>
+        <p class="text-xl text-gray-400 max-w-2xl mb-8">
+            Transforming complex operational data and supply chain workflows into actionable executive insights through interactive dashboards, SQL modeling, and Python.
+        </p>
+        <div class="flex flex-wrap gap-4">
+            <a href="https://linkedin.com/in/francieliengmam" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-3 rounded-lg transition duration-200">LinkedIn Profile</a>
+            <a href="mailto:francieliengmam93@gmail.com" class="bg-gray-800 hover:bg-gray-700 text-gray-300 font-medium px-6 py-3 rounded-lg transition duration-200">Get in Touch</a>
         </div>
-    </navbar>
+    </header>
 
-    <!-- TOPO DO SITE (HERO SECTION) COM FOCO EM CAMPAIGN SPECIALIST & SFMC -->
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="hero-name">Francieli Engmam</h1>
-            <div class="hero-badge">Campaign Specialist & Salesforce Marketing Cloud Expert</div>
-            <h2 class="hero-title">
-                Turning CRM Data into <span class="highlight">Automated Email Campaign Excellence</span>
-            </h2>
-            <p class="hero-subtitle">
-                Campaign Specialist & CRM Operations Expert specializing in Salesforce Marketing Cloud (SFMC) email marketing, lifecycle journeys, SQL data hygiene, and automated workflows.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn-primary">View Case Studies</a>
-                <a href="https://www.linkedin.com/in/francieliengmam" target="_blank" class="btn-secondary">LinkedIn Profile</a>
-            </div>
-        </div>
-    </section>
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-6 pb-24 space-y-16">
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Overview</span>
-                <h2 class="section-title">About Me</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-img-container">
-                    <img src="perfil.jpg.jfif" alt="Francieli Engmam" class="about-img">
+        <!-- Technical Stack -->
+        <section>
+            <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-3">Technical Stack</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
+                    <h3 class="font-semibold text-indigo-400 mb-2">Data Visualization & BI</h3>
+                    <p class="text-sm text-gray-400">Power BI, DAX Modeling, Advanced Excel, Interactive Dashboards & Executive Reporting.</p>
                 </div>
-                <div class="about-content-box">
-                    <div class="about-text">
-                        <p>
-                            Results-driven Campaign Specialist and CRM Data Analyst with a solid background in Business Administration, bridging high-precision data analytics with automated e-mail marketing operations.
-                        </p>
-                        <p>
-                            Specialized in orchestrating lifecycle email journeys, data segmentation logic, and deliverability optimization in Salesforce Marketing Cloud, alongside a strong foundation in supply chain business intelligence.
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
+                    <h3 class="font-semibold text-indigo-400 mb-2">Database & Querying</h3>
+                    <p class="text-sm text-gray-400">SQL Queries, Data Hygiene, Segmentation, Data Extensions & ETL workflows.</p>
+                </div>
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
+                    <h3 class="font-semibold text-indigo-400 mb-2">Programming & Automation</h3>
+                    <p class="text-sm text-gray-400">Python (Pandas), Power Automate, Automated Workflows, and CRM integration.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section>
+            <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-3">Data Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Project 1 -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-indigo-400 font-semibold mb-1">Power BI & Supply Chain</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Supply Chain & EDI Logistics Dashboard</h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Interactive Power BI solution designed to monitor supply chain metrics, order fulfillment rates, and inventory status, providing real-time visibility for operational decision-making.
                         </p>
                     </div>
-                    <ul class="info-list">
-                        <li class="info-item">
-                            <span class="info-label">Role:</span>
-                            <span class="info-value">Campaign Specialist & CRM Analyst</span>
-                        </li>
-                        <li class="info-item">
-                            <span class="info-label">Core Focus:</span>
-                            <span class="info-value">SFMC Email Marketing, Journeys & Data Hygiene</span>
-                        </li>
-                        <li class="info-item">
-                            <span class="info-label">Key Tools:</span>
-                            <span class="info-value">SFMC, SQL, Power BI, Python, HubSpot, Excel</span>
-                        </li>
-                        <li class="info-item">
-                            <span class="info-label">Languages:</span>
-                            <span class="info-value">English (Advanced), Portuguese (Native)</span>
-                        </li>
-                    </ul>
+                    <span class="text-xs text-gray-500 font-mono">Tools: Power BI, DAX, Excel</span>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Capabilities</span>
-                <h2 class="section-title">Tech Stack & Expertise</h2>
-            </div>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <h4>Salesforce Marketing Cloud</h4>
-                    <p>Email Studio, Journey Builder, Automation Studio & Content Builder.</p>
+                <!-- Project 2 -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-indigo-400 font-semibold mb-1">CRM Analytics</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Lifecycle Campaign & Data Hygiene Analytics</h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Auditing and segmentation framework using SQL and Salesforce Marketing Cloud data extensions to analyze subscriber list health, engagement KPIs, and campaign conversion rates.
+                        </p>
+                    </div>
+                    <span class="text-xs text-gray-500 font-mono">Tools: SQL, Salesforce Marketing Cloud, Excel</span>
                 </div>
-                <div class="skill-card">
-                    <h4>SQL & Data Hygiene</h4>
-                    <p>Query Studio, Data Extensions, audience segmentation & list health.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Email Marketing & QA</h4>
-                    <p>Pre-deployment testing, dynamic personalization, UTM audits & deliverability.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Power BI & Campaign KPIs</h4>
-                    <p>Tracking Open Rates, CTR, Conversion, and Executive ROI reports.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Python & Automation</h4>
-                    <p>Pandas data processing, Power Automate & workflow automation.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>CRM Platforms</h4>
-                    <p>HubSpot, Salesforce CRM, Asana, Trello, ClickUp & Notion.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="projects" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Featured Work</span>
-                <h2 class="section-title">Executive Case Studies</h2>
             </div>
+        </section>
 
-            <div class="projects-grid">
-
-                <!-- FEATURED CASE 1: EMAIL MARKETING & SFMC -->
-                <article class="project-card" style="border: 2px solid var(--accent-purple);">
-                    <span class="project-tag">🌟 Flagship Case: Email Marketing & CRM Operations</span>
-                    <h3 class="project-title">Salesforce Marketing Cloud (SFMC) Automated Lifecycle Journeys & Email Campaigns</h3>
-                    <p class="project-desc">
-                        End-to-end execution of high-volume email marketing campaigns, multi-channel lifecycle journeys, and rigorous SQL-based data segmentation for global target audiences.
+        <!-- Professional Experience Summary -->
+        <section>
+            <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-3">Professional Experience</h2>
+            <div class="space-y-6">
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                        <h3 class="text-lg font-bold text-white">Operations & CRM Data Analyst</h3>
+                        <span class="text-sm text-indigo-400">2024 – Present | Independent Consultant</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Managing high-volume campaign operations, data hygiene pipelines, and audience segmentation via Salesforce Marketing Cloud, turning raw metrics into interactive executive Power BI reports.
                     </p>
-                    
-                    <div class="case-deep-narrative">
-                        <div class="narrative-block">
-                            <h4>📧 1. Email Campaign Execution & Journey Builder Architecture</h4>
-                            <p>
-                                Designed and managed automated multi-channel lifecycle email journeys (welcome series, nurture campaigns, and retention loops) across <strong>Email Studio</strong> and <strong>Journey Builder</strong>. Focused on delivering personalized, responsive customer experiences that drive high engagement and retention.
-                            </p>
-                        </div>
-                        <div class="narrative-block">
-                            <h4>⚙️ 2. Data Extensions, SQL Filtration & List Hygiene</h4>
-                            <p>
-                                Solved complex audience targeting challenges by writing advanced SQL queries in <strong>Automation Studio / Query Studio</strong>. Ensured strict data hygiene on Data Extensions, eliminating hard bounces, managing unsubscribes, and optimizing inbox placement and deliverability rates.
-                            </p>
-                        </div>
-                        <div class="narrative-block">
-                            <h4>🔍 3. Pre-Flight QA & Campaign Performance Analytics</h4>
-                            <p>
-                                Conducted rigorous pre-deployment quality assurance checks (link validation, rendering tests across devices, dynamic personalization checks, and UTM parameter audits). Connected real-time campaign engagement metrics (Open Rates, CTR, Conversion) to executive Power BI dashboards.
-                            </p>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="metrics-container">
-                        <div class="metric-box">
-                            <div class="metric-val">&lt; 1%</div>
-                            <div class="metric-lbl">Bounce & Failure Rate</div>
-                        </div>
-                        <div class="metric-box">
-                            <div class="metric-val">100%</div>
-                            <div class="metric-lbl">Zero-Defect Pre-Flight QA</div>
-                        </div>
-                        <div class="metric-box">
-                            <div class="metric-val">Real-Time</div>
-                            <div class="metric-lbl">Power BI KPI Dashboards</div>
-                        </div>
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-800">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                        <h3 class="text-lg font-bold text-white">Customer Support & CRM Operations Specialist</h3>
+                        <span class="text-sm text-indigo-400">2021 – 2024 | NTN bearings do Brasil</span>
                     </div>
-
-                    <div class="project-footer">
-                        <div class="tech-pills">
-                            <span class="pill">Salesforce Marketing Cloud</span>
-                            <span class="pill">Email Studio</span>
-                            <span class="pill">Journey Builder</span>
-                            <span class="pill">Automation Studio</span>
-                            <span class="pill">SQL / Data Extensions</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Case 2: Supply Chain (Mantido com todas as imagens) -->
-                <article class="project-card">
-                    <span class="project-tag">Supply Chain & Data Analytics</span>
-                    <h3 class="project-title">Automotive OEM Supply Chain SLA & Risk Mitigation Dashboard</h3>
-                    <p class="project-desc">
-                        Engineered an enterprise-grade BI Control Tower connecting SAP ERP logistics pipelines with global OEM customer success frameworks.
+                    <p class="text-gray-400 text-sm">
+                        Served as primary liaison for global automotive OEMs, building custom predictive dashboards and control panels in Excel and Power BI to optimize account management and supply chain visibility.
                     </p>
-
-                    <div class="dashboard-showcase">
-                        <div class="showcase-header">📊 Interactive Power BI Cockpit Views</div>
-                        <div class="main-dashboard-frame">
-                            <img src="overview.png.JPG" alt="Supply Chain Overview Dashboard">
-                        </div>
-                        <div class="sub-dashboards-grid">
-                            <div class="sub-dashboard-card">
-                                <img src="performance.png.JPG" alt="Performance SLA Matrix">
-                                <p>Module 2: Performance & SLA Matrix</p>
-                            </div>
-                            <div class="sub-dashboard-card">
-                                <img src="risk-cost.png.JPG" alt="Risk & Cost Mitigation">
-                                <p>Module 3: Risk & Cost Actionable Alerts</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="metrics-container">
-                        <div class="metric-box">
-                            <div class="metric-val">-35%</div>
-                            <div class="metric-lbl">Lead Time Variance</div>
-                        </div>
-                        <div class="metric-box">
-                            <div class="metric-val">&gt;98.5%</div>
-                            <div class="metric-lbl">Forecast Alignment</div>
-                        </div>
-                        <div class="metric-box">
-                            <div class="metric-val">3 Countries</div>
-                            <div class="metric-lbl">Audited Pipeline</div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-footer">
-                        <div class="tech-pills">
-                            <span class="pill">Power BI</span>
-                            <span class="pill">SQL</span>
-                            <span class="pill">SAP ERP</span>
-                            <span class="pill">DAX</span>
-                        </div>
-                    </div>
-                </article>
-
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer id="contact">
-        <div class="container">
-            <p class="copyright">&copy; 2026 Francieli Engmam | Campaign Specialist & CRM Analyst</p>
-        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Francieli Engmam. Built with GitHub Pages.</p>
     </footer>
 
 </body>
